@@ -1,0 +1,526 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@font-face {
+    font-family: "Manrope-Bold";
+    src: url("src/fonts/Manrope-Bold.ttf");
+   
+}
+@font-face{
+    font-family: "Manrope-Regular";
+    src: url("src/fonts/Manrope-Regular.ttf");
+}
+@font-face{
+    font-family: "RobotoSlab-Regular";
+    src: url("src/fonts/RobotoSlab-Regular.ttf");
+}
+@font-face{
+    font-family: "RobotoSlab-Bold";
+    src: url("src/fonts/RobotoSlab-Bold.ttf");
+  
+ }
+
+ * {
+    box-sizing: border-box;
+ }
+
+body {    
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#container {
+    max-width: 72rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 2rem;
+}
+
+.logo {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    align-self: end;
+    position: relative;
+    height:4rem ;
+    left: 2rem;
+    top:1rem;
+}
+
+.navigation {
+    grid-column-start: 4;
+    grid-column-end: -4;
+    grid-row-start: 1;
+    align-self: end;
+    text-align: center;
+    font-family: Manrope-Bold;
+    & a {
+        margin: 0.5rem;
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    }
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    top: 1rem;
+    & a {
+        text-align: bottom;
+
+       
+    }
+   
+}
+
+.loginbutton {
+    height: 2.5rem;
+    width: 100%;
+    align-self: end;
+    background-color: rgb(85, 188, 146);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: white;
+    text-align: center;
+    line-height: 2.5rem;
+    grid-column-start: -2;
+    grid-row-start: 1;
+    &:hover {
+        background-color: rgb(30, 107, 76);
+    }
+}
+#burger{
+    display: none;
+}
+#shop-cart {
+    grid-column-start: -3;
+    grid-row-start: 1;
+    align-self: end;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+#circle {
+    position: absolute;
+    background: lightblue url('/img/dog.png') bottom no-repeat;
+    height: 80rem;
+    width: 80rem;
+    z-index: -1;
+    border-radius: 50%;
+    top: -34rem;
+    left: 25%;
+
+}
+
+#title {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    text-align: left;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    & h1{
+        font-family:RobotoSlab-Bold;
+    }
+    & p{
+        font-family: Manrope-Regular;
+    }
+}
+
+.shop-now {
+    color: white;
+    height: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    line-height: 3rem;
+    width: 8rem;
+    border: none;
+    background-color: rgb(85, 188, 146);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background-color: rgb(30, 107, 76);
+    }
+}
+.about-as {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 3;
+    text-align: center;
+    background-color: rgb(212, 206, 206);
+    margin-top: 15rem;
+    position: relative;
+    overflow: hidden;
+    font-family:RobotoSlab-Bold;
+    & > div {
+        position: relative;
+    }
+    & p {
+        margin: 3rem 3rem;
+        font-family: Manrope-Regular;
+        font-size:12px;
+    }
+    & h1 {
+        font-family:RobotoSlab-Bold;
+    }
+    & .circle {
+        fill: transparent;
+        stroke:  rgb(85, 188, 146);
+        stroke-width: 20;
+        position: absolute;
+        right: -50px;
+        bottom: -100px;
+        z-index: 0;
+    }  
+    & .rect {
+        fill: transparent;
+        background-color: transparent;
+        stroke:rgb(248, 204, 106);
+        stroke-width: 40;
+        position: absolute;
+        left: -50px;
+        top: -100px;
+        z-index: 0;
+        transform: rotate(55deg);
+    }  
+}
+
+#services {
+    grid-column-start: 2;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    font-size: 12px;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    & h3 {
+        cursor: pointer;
+        margin: 0;
+    }
+    & content {
+        font-size: 15px;
+    }
+    & img {
+        size: 2rem;
+        padding: 0.5rem;
+    }
+    & .service {
+        padding: 0.5rem
+    }
+    & .blue {
+        background-color: #d4fbff;
+    }
+}
+
+
+#benefits {
+    display: grid;
+    grid-column-start: 8;
+    grid-column-end: 13;
+    grid-row: 5;
+    & p::before {
+        content: url('/img/paw.png');
+        background-size: cover;
+        display: inline-block;
+        width: 2rem;
+        font-family: Manrope-Regular;
+    }
+    & h3 {
+        color: grey;
+        font-size: 15px;
+        font-family: Manrope-Bold;
+    }
+}
+
+#our-services {
+    grid-column-start: 4;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    text-align: center;
+    font-family:RobotoSlab-Bold;
+    & p {
+        font-size: 0.8rem;
+        color: grey;
+        font-family: Manrope-Regular;
+        line-break:auto;
+    }
+}
+
+.products {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 6;
+    text-align: center;
+    font-family:RobotoSlab-Bold;
+    & h1 {
+        text-align: center;        
+    }
+}
+
+#carouselLeft {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 2rem;
+    grid-column-start: 1;
+    grid-row-start: 7;
+    align-self: center;
+    cursor: pointer;
+}
+
+#carouselRight {
+    height: 3rem;
+    width: 3rem;
+    grid-column-end: -1;
+    grid-row-start: 7;
+    transform: rotate(180deg);
+    align-self: center;
+    right: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#carousel {
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    & > div {
+        text-align: center;
+        & > img {
+            height: 11.3rem;
+            width: 11.3rem;
+            padding: 1rem;
+        }
+        & .title {
+            font-family:RobotoSlab-Bold;
+        }
+        & .price {
+            color: orangered;
+            font-family:RobotoSlab-Bold;
+        }
+    }
+}
+
+.contact-us {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 8;
+    background-color: rgb(250, 250, 245);
+    display: flex;
+    padding: 1rem;
+    
+    & > div {
+        width: 50%;
+    }
+    & input,
+    textarea {
+        margin: 0.5rem;
+        width: calc(100% - 2rem);
+        border: solid 1px gray;
+        padding: 0.70rem;
+        border-radius: 1rem;
+        font-family: Manrope-Regular;
+    }
+    & textarea {
+        height: 10rem;
+        font-family: Manrope-Regular;
+    }
+    & input[type='submit'] {
+        color: white;
+        height: 3rem;
+        border-radius: 3rem;
+        line-height: 2rem;
+        border: none;
+        background-color: rgb(85, 188, 146);
+        cursor: pointer;
+        font-family: Manrope-Regular;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            background-color: rgb(30, 107, 76);
+        }
+    }
+    & form,
+    p
+     {
+        text-align: center;
+        font-family: Manrope-Regular;
+        color: rgb(128, 128, 128);
+        
+        
+    }
+    & h1{
+        font-family:RobotoSlab-Bold;
+        text-align: center;
+    }
+}
+
+#img1 {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    left: 7rem;
+    top: 7rem;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 1rem;
+    height: 25rem;
+    background-color: rgb(1, 40, 65);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    & .top {
+        margin-top: 3rem;
+        padding: 1rem;
+        max-width: 72rem;
+        align-self: center;
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 5px;
+    }
+    & .bottom {
+        position: relative;
+        text-align: center;
+        background-color: rgb(11, 62, 92);
+        color: white;
+        padding: 0.3rem;
+    }
+    & .puppy-txt{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: -1rem;
+        text-align: center;
+        padding: 1rem;
+        margin-right:1rem;
+        font-size: 12px;   
+    }
+}
+
+.about {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-left: 5rem;
+    color: rgb(28, 153, 242);
+    margin-top:1rem;
+    & a {
+        text-decoration: none;
+        color: white;
+        text-align: left;
+        font-size: 12px;
+        width: 100%;
+    }
+    & h5 {
+        color: rgb(28, 153, 242);
+    }
+}
+
+.support {
+    grid-column-start: 3;
+    margin-top:1rem;
+    display: grid;
+    margin-left: 5rem;
+    width: 100%;
+    color: rgb(28, 153, 242);
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+    }
+}
+
+.follow {
+    grid-column-start: 4;
+    margin-top:2rem;
+    margin-left: 5rem;
+    display: grid;
+    color: rgb(28, 153, 242);
+    margin-top:1rem;
+}
+
+.link-dog{
+    display: grid;
+    grid-column-end: 6;
+    & .dog-look{
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        z-index: 1;
+        left:2rem;
+        top:4.7rem;
+      
+    }
+ 
+}
+
+.link-dog-tablet {
+    display: none
+}
+.link-dog-mobile{
+    display: none;
+}
+
+.social {
+    margin-bottom:8rem;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 0;
+    & li {
+        display: table-cell;
+    }
+    & li a {
+        color: rgb(1, 40, 65);
+        background-color: rgb(28, 153, 242);
+        border-radius: 0.5rem;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        border: 1px solid rgba(256, 256, 256, 0.6);
+        cursor: pointer;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        transition: ease 0.3s;
+        &:hover {
+            color:white;
+            border: 1px solid rgba(256, 256, 256, 1);
+        }
+    }
+}
+
+.social:hover > li {
+    opacity: 0.5;
+}
+
+.social:hover > li:hover {
+    opacity: 1;
+}

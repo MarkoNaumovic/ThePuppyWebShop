@@ -1,0 +1,155 @@
+// Tablets portait 800x800
+@media only screen and(max-width: 800px){
+    #container {
+        grid-row-gap: 3.75rem;
+    }
+    #shop-cart {
+        text-align: left;
+        & .cart{
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+       
+    }
+    .loginbutton{
+        position: relative;
+        height: 2.3rem;
+        width: 5.5rem;
+        right: 1em;
+    }
+    #circle {
+    
+        height: 80rem;
+        width: 65rem;
+        z-index: -1;
+        border-radius: 50%;
+        top: -34rem;
+        left: 20%;
+    }
+
+    #title{
+        margin-top: 0rem;
+        grid-column-start: 1;
+        margin-left: 3rem;
+        margin-right: 0.5rem;
+    }
+    #our-services {
+        grid-column-start: 2;
+        grid-column-end: 12;
+        grid-row-start: 4;
+    }
+   
+    
+    #services{
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    width: 100%;
+    font-size: 12px;
+   
+    }
+    #benefits {
+        grid-column-start: 2;
+        grid-row-start: 6;
+        width: 100%;
+        text-align: center;
+    }
+
+    .products{
+        grid-row-start: 7;
+    }
+    #carouselLeft{
+        position: relative;
+        grid-row-start: 8;
+        height: 2rem;
+        width: 2rem;
+        bottom: 2rem;
+        left: -1rem;
+    }
+    #carouselRight {
+        position: relative;
+        grid-row-start: 8;
+        height: 2rem;
+        width: 2rem;
+        bottom: 1.5rem;
+        margin-left: 1rem;
+    }
+    #carousel {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 8;
+        display: flex;
+        margin-left: 1rem;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        & > div {
+            text-align: center;
+            & > img {
+                height: 7.6rem;
+                width: 7.7rem;
+                padding: 1rem;
+           }   }
+    
+    }
+    .contact-us {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 9;
+    }
+    #img1 {
+        position: relative;
+        width: 20rem;
+        height: 20rem;
+        left: 1rem;
+        top: 5rem;
+    }
+    #footer {
+    .puppy-txt{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-top: -1rem;
+        text-align: center;
+        padding: 1rem;
+        margin-left:2rem;
+        font-size: 12px;   
+    }
+    .about {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 2;
+        margin-left: 5rem;
+        width: 100%;
+    }
+    .support {
+        margin-left: 5rem;
+        width: 100%;
+    }
+    .follow{
+        margin-left: 4rem;
+        position: relative;
+    }
+    
+    .link-dog{
+        display:none;
+    }
+    .link-dog-mobile{
+        display:none;
+    }
+    .link-dog-tablet{
+        display:block;
+         position: absolute;
+         bottom: -4rem;
+            right:-4rem;
+            z-index: 1;
+            width: 15rem;
+            height: 12rem;
+    }
+    .bottom {
+        font-size: 12px;
+    }
+    
+}
+}
+
